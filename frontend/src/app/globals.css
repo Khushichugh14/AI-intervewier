@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Premium Dark Theme Color Tokens */
+  --bg-obsidian: #080C14;
+  --bg-card: rgba(22, 29, 48, 0.7);
+  --bg-card-hover: rgba(30, 41, 67, 0.85);
+  --bg-glass-border: rgba(255, 255, 255, 0.08);
+  
+  --primary-cyan: #00E5FF;
+  --primary-blue: #2979FF;
+  --secondary-purple: #7D4CFF;
+  
+  --text-white: #F8FAFC;
+  --text-gray: #94A3B8;
+  --text-muted: #64748B;
+  
+  --success-green: #00E676;
+  --danger-red: #FF1744;
+  --warning-orange: #FF9100;
+  
+  --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.25);
+  --glow-purple: 0 0 20px rgba(125, 76, 255, 0.25);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-white);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Background Glowing Orbs */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.12;
+  filter: blur(120px);
+}
+
+body::before {
+  top: -10vw;
+  right: -10vw;
+  background: var(--primary-cyan);
+}
+
+body::after {
+  bottom: -10vw;
+  left: -10vw;
+  background: var(--secondary-purple);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Premium Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-blue) 50%, var(--secondary-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #A78BFA 0%, var(--secondary-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-panel-interactive {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition-smooth);
+}
+
+.glass-panel-interactive:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-4px);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Buttons with premium aesthetics */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-blue) 100%);
+  color: #040814;
+  font-family: var(--font-display);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 14px rgba(0, 229, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.5), var(--glow-cyan);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-white);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 23, 68, 0.15);
+  color: var(--danger-red);
+  border: 1px solid rgba(255, 23, 68, 0.3);
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.btn-danger:hover {
+  background: var(--danger-red);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(255, 23, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.05);
+  border-top-color: var(--primary-cyan);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Micro-animations */
+.hover-grow {
+  transition: var(--transition-smooth);
+}
+.hover-grow:hover {
+  transform: scale(1.02);
+}

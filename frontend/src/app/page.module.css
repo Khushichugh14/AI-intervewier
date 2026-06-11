@@ -1,0 +1,335 @@
+.pageWrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-obsidian);
+}
+
+.header {
+    border-bottom: 1px solid var(--bg-glass-border);
+    background: rgba(8, 12, 20, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.logoIcon {
+    color: var(--primary-cyan);
+    filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.4));
+}
+
+.heroSection {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    padding: 80px 24px;
+    flex: 1;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.badge {
+    align-self: flex-start;
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    color: var(--primary-cyan);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--text-white);
+}
+
+.heroDescription {
+    font-size: 1.15rem;
+    color: var(--text-gray);
+    max-width: 540px;
+}
+
+.featuresList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+.checkIcon {
+    color: var(--primary-cyan);
+}
+
+/* Auth Card Styles */
+.authCard {
+    padding: 40px;
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+}
+
+.authTitle {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 6px;
+}
+
+.authSubtitle {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.inputField {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    transition: var(--transition-smooth);
+}
+
+.inputField input {
+    width: 100%;
+    background: rgba(8, 12, 20, 0.4);
+    border: 1px solid var(--bg-glass-border);
+    border-radius: 8px;
+    padding: 12px 16px 12px 42px;
+    color: var(--text-white);
+    font-size: 0.95rem;
+    font-family: var(--font-sans);
+    transition: var(--transition-smooth);
+}
+
+.inputField input:focus {
+    outline: none;
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.15);
+    background: rgba(8, 12, 20, 0.6);
+}
+
+.inputField input:focus + .inputIcon {
+    color: var(--primary-cyan);
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: 10px;
+    height: 48px;
+    justify-content: center;
+}
+
+.authToggle {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.authToggle span {
+    color: var(--primary-cyan);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.authToggle span:hover {
+    text-decoration: underline;
+}
+
+/* Alert Notification Panel */
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.alertError {
+    background: rgba(255, 23, 68, 0.08);
+    border: 1px solid rgba(255, 23, 68, 0.2);
+    color: #FFA4A4;
+}
+
+.alertSuccess {
+    background: rgba(0, 230, 118, 0.08);
+    border: 1px solid rgba(0, 230, 118, 0.2);
+    color: #A4FFA4;
+}
+
+/* How It Works Styles */
+.howItWorks {
+    background: rgba(8, 12, 20, 0.4);
+    border-top: 1px solid var(--bg-glass-border);
+    padding: 100px 0;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.stepCard {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.stepIconWrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blueGlow {
+    background: rgba(41, 121, 255, 0.1);
+    color: var(--primary-blue);
+    border: 1px solid rgba(41, 121, 255, 0.2);
+}
+
+.cyanGlow {
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--primary-cyan);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.purpleGlow {
+    background: rgba(125, 76, 255, 0.1);
+    color: var(--secondary-purple);
+    border: 1px solid rgba(125, 76, 255, 0.2);
+}
+
+.greenGlow {
+    background: rgba(0, 230, 118, 0.1);
+    color: var(--success-green);
+    border: 1px solid rgba(0, 230, 118, 0.2);
+}
+
+.stepCard h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.stepCard p {
+    font-size: 0.92rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.footer {
+    border-top: 1px solid var(--bg-glass-border);
+    padding: 30px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    background: var(--bg-obsidian);
+}
+
+@media (max-width: 1024px) {
+    .heroSection {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 24px;
+    }
+    
+    .authCard {
+        margin: 0 auto;
+    }
+    
+    .stepsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+    
+    .stepsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .authCard {
+        padding: 24px;
+    }
+}
